@@ -1,0 +1,16 @@
+server:
+  port: 6969
+spring:
+  application:
+    name: GOFISHING-COFIG-SERVER
+  cloud:
+    config:
+     server:
+      git:
+       uri: https://github.com/as14141015/gofishing-config.git
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8761/eureka/

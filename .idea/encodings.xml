@@ -4,7 +4,7 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gofishing-basic-parent" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gofishing-basic-parent/basic-util" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gofishing-config_server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gofishing-config-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gofishing-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gofishing-plat-parent" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-interface" charset="UTF-8" />

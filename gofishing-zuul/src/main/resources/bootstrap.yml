@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    config:
+      profile: dev
+      name: application-zuul #找仓库的哪个文件
+      uri:
+      discovery:
+        service-id: GOFISHING-COFIG-SERVER #集群配置
+        enabled: true
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8761/eureka/
