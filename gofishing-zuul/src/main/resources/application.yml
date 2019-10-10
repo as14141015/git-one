@@ -1,0 +1,19 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: GOFISHING-ZUUL
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:root@localhost:8761/eureka
+  instance:
+    instance-id: gateway-8888.com
+    prefer-ip-address: true
+zuul:
+  ignoredServices: '*' #只能通过路由访问，不能使用服务名访问
+  routes:
+    plat:
+      serviceId: GOFISHING-PLAT
+      path: /plat/**
+  prefix: /services
