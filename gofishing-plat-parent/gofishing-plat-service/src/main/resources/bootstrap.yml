@@ -3,7 +3,7 @@ spring:
     config:
       profile: dev
       name: application-plat #找仓库的哪个文件
-      uri: #http://localhost:6969 #单机配置
+      #uri: #http://localhost:6969 #单机配置
       discovery:
         service-id: GOFISHING-COFIG-SERVER #集群配置
         enabled: true

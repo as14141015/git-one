@@ -10,7 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>gofishing-eureka</module>
-        <module>gofishing-config_server</module>
+        <module>gofishing-config-server</module>
         <module>gofishing-zuul</module>
         <module>gofishing-basic-parent</module>
         <module>gofishing-plat-parent</module>

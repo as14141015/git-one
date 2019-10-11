@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7af97ff0-3d06-4098-b6f5-9a7cf78a4b9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-config-server/src/main/java/cn/itsource/config/ConfigApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/resources/application_dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-zuul/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-config_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-config-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-config-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-zuul/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-zuul/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-zuul/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-zuul/src/main/resources/application_zuul.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-config-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-config-server/src/main/java/cn/itsource/config/ConfigApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-config-server/src/main/java/cn/itsource/config/ConfigApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-config-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-config-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/resources/application_dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/resources/application_dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gpfishing/zuul/ZuulApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gpfishing/zuul/ZuulApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-zuul/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-zuul/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +101,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.EurekaServerApp">
+  <component name="RunManager" selected="Spring Boot.ZuulApp">
     <configuration name="ConfigApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="gofishing-config-server" />
       <extension name="coverage">
@@ -175,17 +171,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@be825f61" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@50202316" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@be825f61" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@8e2e4ade" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@be825f61" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@8009acf" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@50202316" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3ba44388" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -206,8 +197,18 @@
       <workItem from="1570528344325" duration="7120000" />
       <workItem from="1570535669175" duration="726000" />
       <workItem from="1570694490281" duration="1278000" />
-      <workItem from="1570703011346" duration="5414000" />
+      <workItem from="1570703011346" duration="5781000" />
+      <workItem from="1570718837705" duration="442000" />
+      <workItem from="1570755037659" duration="7003000" />
     </task>
+    <task id="LOCAL-00001" summary="提交">
+      <created>1570718391296</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570718391297</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,10 +219,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交" />
   </component>
 </project>

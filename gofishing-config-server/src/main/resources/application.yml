@@ -1,16 +1,23 @@
+
+#==================================================================
 server:
   port: 6969
-spring:
-  application:
-    name: GOFISHING-COFIG-SERVER
-  cloud:
-    config:
-     server:
-      git:
-       uri: https://github.com/as14141015/gofishing-config.git
+
 eureka:
   instance:
     prefer-ip-address: true
   client:
     serviceUrl:
+      #因为注册中心配置了需要登陆才能访问，所以需要在配置注册中心这加上登陆账户和密码
       defaultZone: http://root:root@localhost:8761/eureka/
+
+# 配置配置获取地址
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/as14141015/gofishing-config.git
+  #          uri: https://github.com/g279215350/config.git
+  application:
+    name: GOFISHING-COFIG-SERVER
