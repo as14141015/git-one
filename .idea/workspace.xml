@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7af97ff0-3d06-4098-b6f5-9a7cf78a4b9c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gpfishing/zuul/cofig/GlobalCorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-config-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-config-server/src/main/java/cn/itsource/config/ConfigApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-config-server/src/main/java/cn/itsource/config/ConfigApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-config-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-config-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/resources/application_dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/resources/application_dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gpfishing/zuul/ZuulApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gpfishing/zuul/ZuulApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-zuul/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-zuul/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/AjaxResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/AjaxResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/java/cn/itsource/gofishing/plat/service/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/java/cn/itsource/gofishing/plat/service/controller/LoginController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,6 +73,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="service.view.auto.scroll.to.source" value="true" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
@@ -156,8 +154,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ZuulApp" />
         <item itemvalue="Spring Boot.PlatServiceApp" />
+        <item itemvalue="Spring Boot.ZuulApp" />
         <item itemvalue="Spring Boot.ConfigApp" />
         <item itemvalue="Spring Boot.EurekaServerApp" />
       </list>
@@ -171,12 +169,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@50202316" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@9530badd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@50202316" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3ba44388" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@9530badd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@210b7c2d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -199,7 +197,8 @@
       <workItem from="1570694490281" duration="1278000" />
       <workItem from="1570703011346" duration="5781000" />
       <workItem from="1570718837705" duration="442000" />
-      <workItem from="1570755037659" duration="7003000" />
+      <workItem from="1570755037659" duration="8524000" />
+      <workItem from="1570792020844" duration="6050000" />
     </task>
     <task id="LOCAL-00001" summary="提交">
       <created>1570718391296</created>
@@ -208,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570718391297</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="解决无法拉取的bug">
+      <created>1570789758223</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1570789758223</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +235,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交" />
+    <MESSAGE value="解决无法拉取的bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决无法拉取的bug" />
   </component>
 </project>

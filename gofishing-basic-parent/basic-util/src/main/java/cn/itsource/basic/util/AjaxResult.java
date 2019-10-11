@@ -5,7 +5,7 @@ package cn.itsource.basic.util;
  */
 public class AjaxResult {
     private Boolean success = true;
-    private String msg = "操作成功！";
+    private String message = "操作成功！";
     private Object object;
 
     private AjaxResult() {
@@ -23,12 +23,12 @@ public class AjaxResult {
         return this;
     }
 
-    public String getMsg() {
-        return msg;
+    public String getMessage() {
+        return message;
     }
 
-    public AjaxResult setMsg(String msg) {
-        this.msg = msg;
+    public AjaxResult setMessage(String message) {
+        this.message = message;
         return this;
     }
 

@@ -6,12 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="gofishing-plat-interface" />
         <module name="gofishing-plat-service" />
+        <module name="gofishing-eureka" />
+        <module name="gofishing-zuul" />
         <module name="gofishing-config-server" />
         <module name="basic-util" />
-        <module name="gofishing-zuul" />
-        <module name="gofishing-eureka" />
-        <module name="gofishing-plat-interface" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />
