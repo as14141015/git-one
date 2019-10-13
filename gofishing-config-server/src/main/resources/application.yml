@@ -1,8 +1,6 @@
 
-#==================================================================
 server:
   port: 6969
-
 eureka:
   instance:
     prefer-ip-address: true
@@ -10,7 +8,6 @@ eureka:
     serviceUrl:
       #因为注册中心配置了需要登陆才能访问，所以需要在配置注册中心这加上登陆账户和密码
       defaultZone: http://root:root@localhost:8761/eureka/
-
 # 配置配置获取地址
 spring:
   cloud:
@@ -18,6 +15,5 @@ spring:
       server:
         git:
           uri: https://github.com/as14141015/gofishing-config.git
-  #          uri: https://github.com/g279215350/config.git
   application:
     name: GOFISHING-COFIG-SERVER

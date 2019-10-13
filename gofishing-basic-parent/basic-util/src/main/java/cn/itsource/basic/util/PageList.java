@@ -7,22 +7,22 @@ import java.util.List;
  * 分页工具父类类
  */
 public class PageList<T> {
-    private Integer total;
+    private Long total;
     private List<T> rows = new ArrayList<>();
 
     public PageList() {
     }
 
-    public PageList(Integer total, List<T> rows) {
+    public PageList(Long total, List<T> rows) {
         this.total = total;
         this.rows = rows;
     }
 
-    public Integer getTotal() {
+    public Long getTotal() {
         return total;
     }
 
-    public void setTotal(Integer total) {
+    public void setTotal(Long total) {
         this.total = total;
     }
 

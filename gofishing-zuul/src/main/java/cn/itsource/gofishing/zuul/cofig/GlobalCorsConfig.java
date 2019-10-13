@@ -1,4 +1,4 @@
-package cn.itsource.gpfishing.zuul.cofig;
+package cn.itsource.gofishing.zuul.cofig;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

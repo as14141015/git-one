@@ -2,12 +2,65 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7af97ff0-3d06-4098-b6f5-9a7cf78a4b9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gpfishing/zuul/cofig/GlobalCorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-generater/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-generater/src/main/java/cn/itsource/basic/generater/CodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-generater/src/main/resources/generate-product.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-generater/src/main/resources/templates/controller.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-generater/src/main/resources/templates/query.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/BitStatesUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/ClassUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/CodeGenerateUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/GlobalSetting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/LetterUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/ProductStateConsts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/PropertiesHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/StrUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/encrypt/DES.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/encrypt/MD5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/query/BaseQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-interface/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-interface/src/main/java/cn/itsource/product/domain/Brand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-interface/src/main/java/cn/itsource/product/domain/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-interface/src/main/java/cn/itsource/product/domain/ProductType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-interface/src/main/java/cn/itsource/product/query/BrandQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-interface/src/main/java/cn/itsource/product/query/ProductQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-interface/src/main/java/cn/itsource/product/query/ProductTypeQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/ProductServiceApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/config/Swagger2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/controller/BrandController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/controller/ProductTypeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/mapper/BrandMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/mapper/ProductMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/mapper/ProductTypeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/service/IBrandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/service/IProductTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/service/impl/BrandServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/service/impl/ProductTypeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/resources/cn/itsource/product/mapper/BrandMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/resources/cn/itsource/product/mapper/ProductMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/resources/cn/itsource/product/mapper/ProductTypeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/test/java/cn/itsource/product/service/impl/BrandServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/AjaxResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/AjaxResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/PageList.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/PageList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-basic-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-basic-parent/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-config-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-config-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/java/cn/itsource/gofishing/plat/service/cofig/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/java/cn/itsource/gofishing/plat/service/config/Swagger2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/java/cn/itsource/gofishing/plat/service/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/java/cn/itsource/gofishing/plat/service/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gpfishing/zuul/ZuulApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gofishing/zuul/ZuulApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gpfishing/zuul/cofig/DocumentationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gofishing/zuul/cofig/DocumentationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gpfishing/zuul/cofig/GlobalCorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gofishing/zuul/cofig/GlobalCorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gpfishing/zuul/cofig/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gofishing/zuul/cofig/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,17 +79,43 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc:mysql://localhost:3306/gofishing?serverTimezone=GMT%2B8" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc:mysql://localhost:3306/gofishing?serverTimezone=GMT%2B8" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc:mysql://localhost:3306/gofishing?serverTimezone=GMT%2B8" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="gofishing: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
     <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="gofishing-parent" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -58,8 +137,12 @@
     <option name="jreName" value="1.8" />
   </component>
   <component name="ProjectId" id="1RusVpYa8ALe1QTnRh3EUM8Fye1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -67,17 +150,31 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/gofishing-zuul/src/main/resources" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/gofishing-basic-parent/basic-generater/src/main/resources/templates" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="service.view.auto.scroll.to.source" value="true" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="cn.itsource.product.service.impl" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="cn.itsource.product.serv" />
+      <recent name="cn.itsource.product" />
+      <recent name="cn.itsource.product.service" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\eclipse\eclipse-jee-neon-2-win32-x86_64\gofishing-parent\gofishing-basic-parent\basic-generater\src\main\resources\templates" />
       <recent name="D:\eclipse\eclipse-jee-neon-2-win32-x86_64\gofishing-parent\gofishing-zuul\src\main\resources" />
       <recent name="D:\eclipse\eclipse-jee-neon-2-win32-x86_64\gofishing-parent\gofishing-config-server\src\main\resources" />
     </key>
@@ -99,7 +196,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ZuulApp">
+  <component name="RunManager" selected="JUnit.BrandServiceImplTest.queryPage">
+    <configuration name="BrandServiceImplTest.queryPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gofishing-product-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.itsource.product.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.itsource.product.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="cn.itsource.product.service.impl.BrandServiceImplTest" />
+      <option name="METHOD_NAME" value="queryPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ConfigApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="gofishing-config-server" />
       <extension name="coverage">
@@ -113,19 +226,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EurekaServerApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="gofishing-eureka" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.itsource.gofishing.eureka.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.itsource.gofishing.eureka.EurekaServerApp" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PlatServiceApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="gofishing-plat-service" />
       <extension name="coverage">
@@ -135,6 +235,20 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="cn.itsource.gofishing.plat.service.PlatServiceApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="gofishing-product-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.itsource.product.service.serivce.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.itsource.product.ProductServiceApp" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -154,27 +268,32 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ProductServiceApp" />
+        <item itemvalue="JUnit.BrandServiceImplTest.queryPage" />
         <item itemvalue="Spring Boot.PlatServiceApp" />
         <item itemvalue="Spring Boot.ZuulApp" />
         <item itemvalue="Spring Boot.ConfigApp" />
-        <item itemvalue="Spring Boot.EurekaServerApp" />
       </list>
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
       <serviceView>
-        <option name="contentProportion" value="0.17896175" />
+        <option name="contentProportion" value="0.2056011" />
         <treeState>
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@9530badd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5001cc17" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@9530badd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@210b7c2d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5001cc17" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@bec85e2a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c446abe" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -198,7 +317,10 @@
       <workItem from="1570703011346" duration="5781000" />
       <workItem from="1570718837705" duration="442000" />
       <workItem from="1570755037659" duration="8524000" />
-      <workItem from="1570792020844" duration="6050000" />
+      <workItem from="1570792020844" duration="6195000" />
+      <workItem from="1570864444231" duration="1034000" />
+      <workItem from="1570876619257" duration="10878000" />
+      <workItem from="1570946370957" duration="13723000" />
     </task>
     <task id="LOCAL-00001" summary="提交">
       <created>1570718391296</created>
@@ -214,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570789758223</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="登录集成前端模块">
+      <created>1570802722537</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1570802722538</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,8 +363,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="提交" />
     <MESSAGE value="解决无法拉取的bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决无法拉取的bug" />
+    <MESSAGE value="登录集成前端模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录集成前端模块" />
   </component>
 </project>

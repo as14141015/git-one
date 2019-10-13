@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    config:
+      profile: dev
+      name: application-product #找仓库的哪个文件
+      #uri: #http://localhost:6969 #单机配置
+      discovery:
+        service-id: GOFISHING-COFIG-SERVER #集群配置
+        enabled: true
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8761/eureka/
+logging:
+  level:
+    cn.itsource.gofishing: debug

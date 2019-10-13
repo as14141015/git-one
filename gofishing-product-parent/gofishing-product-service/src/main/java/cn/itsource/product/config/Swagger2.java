@@ -1,4 +1,4 @@
-package cn.itsource.gofishing.plat.service.cofig;
+package cn.itsource.product.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -24,7 +24,7 @@ public class Swagger2 {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("cn.itsource.gofishing.plat.service.controller"))
+                .apis(RequestHandlerSelectors.basePackage("cn.itsource.product.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -34,7 +34,7 @@ public class Swagger2 {
         return new ApiInfoBuilder()
                 .title("平台服务api")
                 .description("平台服务接口文档说明")
-                .contact(new Contact("bke", "", ""))
+                .contact(new Contact("BKE", "", ""))
                 .version("1.0")
                 .build();
     }
