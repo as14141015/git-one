@@ -25,10 +25,9 @@ public class ProductTypeServiceImpl extends ServiceImpl<ProductTypeMapper, Produ
 
     @Override
     public List<ProductType> loadProductTypeTree() {
-        //先查询所有
+        //查询所有
         List<ProductType> allProductTypes = baseMapper.selectList(null);
-        //1000
-        //再组装数据
+        //创建一个新集合来接收一级
         List<ProductType> firstLevelTypes = new ArrayList<>();
         Map<Long,ProductType> productTypeMap = new HashMap<>();
         //将所有的productType存入map中
@@ -41,9 +40,13 @@ public class ProductTypeServiceImpl extends ServiceImpl<ProductTypeMapper, Produ
             if(productType.getPid()==0){
                 firstLevelTypes.add(productType);
             }else{
-                //如果不是一级
+                //不是一级就用他的子级找上级
                 ProductType parent =
                         productTypeMap.get(productType.getPid());
+                //没有子类的先创建一个待用
+                if (parent.getChildren() == null) {
+                    parent.setChildren(new ArrayList<>());
+                }
                 parent.getChildren().add(productType);
             }
         }

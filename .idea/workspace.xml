@@ -1,66 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7af97ff0-3d06-4098-b6f5-9a7cf78a4b9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-generater/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-generater/src/main/java/cn/itsource/basic/generater/CodeGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-generater/src/main/resources/generate-product.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-generater/src/main/resources/templates/controller.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-generater/src/main/resources/templates/query.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/BitStatesUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/ClassUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/CodeGenerateUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/GlobalSetting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/LetterUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/ProductStateConsts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/PropertiesHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/StrUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/encrypt/DES.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/encrypt/MD5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/query/BaseQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-interface/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-interface/src/main/java/cn/itsource/product/domain/Brand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-interface/src/main/java/cn/itsource/product/domain/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-interface/src/main/java/cn/itsource/product/domain/ProductType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-interface/src/main/java/cn/itsource/product/query/BrandQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-interface/src/main/java/cn/itsource/product/query/ProductQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-interface/src/main/java/cn/itsource/product/query/ProductTypeQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/ProductServiceApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/config/Swagger2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/controller/BrandController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/controller/ProductTypeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/mapper/BrandMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/mapper/ProductMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/mapper/ProductTypeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/service/IBrandService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/service/IProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/service/IProductTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/service/impl/BrandServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/service/impl/ProductTypeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/resources/cn/itsource/product/mapper/BrandMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/resources/cn/itsource/product/mapper/ProductMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/resources/cn/itsource/product/mapper/ProductTypeMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/test/java/cn/itsource/product/service/impl/BrandServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="7af97ff0-3d06-4098-b6f5-9a7cf78a4b9c" name="Default Changelist" comment="商品模块初步形成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/PageList.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-basic-parent/basic-util/src/main/java/cn/itsource/basic/util/PageList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-basic-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-basic-parent/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-config-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-config-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/java/cn/itsource/gofishing/plat/service/cofig/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/java/cn/itsource/gofishing/plat/service/config/Swagger2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/java/cn/itsource/gofishing/plat/service/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-plat-parent/gofishing-plat-service/src/main/java/cn/itsource/gofishing/plat/service/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gpfishing/zuul/ZuulApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gofishing/zuul/ZuulApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gpfishing/zuul/cofig/DocumentationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gofishing/zuul/cofig/DocumentationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gpfishing/zuul/cofig/GlobalCorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gofishing/zuul/cofig/GlobalCorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gpfishing/zuul/cofig/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gofishing/zuul/cofig/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/service/impl/ProductTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/product/service/impl/ProductTypeServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -320,7 +263,7 @@
       <workItem from="1570792020844" duration="6195000" />
       <workItem from="1570864444231" duration="1034000" />
       <workItem from="1570876619257" duration="10878000" />
-      <workItem from="1570946370957" duration="13723000" />
+      <workItem from="1570946370957" duration="18136000" />
     </task>
     <task id="LOCAL-00001" summary="提交">
       <created>1570718391296</created>
@@ -343,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570802722538</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="商品模块初步形成">
+      <created>1570978030190</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570978030190</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,6 +317,7 @@
     <MESSAGE value="提交" />
     <MESSAGE value="解决无法拉取的bug" />
     <MESSAGE value="登录集成前端模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="登录集成前端模块" />
+    <MESSAGE value="商品模块初步形成" />
+    <option name="LAST_COMMIT_MESSAGE" value="商品模块初步形成" />
   </component>
 </project>
