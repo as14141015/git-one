@@ -1,8 +1,7 @@
-package cn.itsource.product.config;
+package cn.itsource.common.service.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
- 
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -24,16 +23,15 @@ public class Swagger2 {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("cn.itsource.product.controller"))
+                .apis(RequestHandlerSelectors.basePackage("cn.itsource.common.service.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
 
-
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("商品服务api")
-                .description("商品服务接口文档说明")
+                .title("公共服务api")
+                .description("公共服务接口文档说明")
                 .contact(new Contact("BKE", "", ""))
                 .version("1.0")
                 .build();

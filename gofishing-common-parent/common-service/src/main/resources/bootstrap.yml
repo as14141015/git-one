@@ -2,10 +2,11 @@ spring:
   cloud:
     config:
       profile: dev
-      name: application-zuul #找仓库的哪个文件
+      name: application-common
       discovery:
-        service-id: GOFISHING-COFIG-SERVER #集群配置
+        service-id: GOFISHING-COFIG-SERVER #配置中心集群配置
         enabled: true
+#注册中心配置
 eureka:
   instance:
     prefer-ip-address: true

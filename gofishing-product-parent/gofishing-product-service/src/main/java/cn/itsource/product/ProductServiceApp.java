@@ -12,7 +12,6 @@ import org.springframework.context.annotation.Bean;
 @MapperScan("cn.itsource.product.mapper")
 public class ProductServiceApp {
     public static void main(String[] args) {
-
         SpringApplication.run(ProductServiceApp.class,args);
     }
 

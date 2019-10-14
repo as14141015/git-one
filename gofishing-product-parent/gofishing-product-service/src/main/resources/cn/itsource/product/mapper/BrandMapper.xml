@@ -18,10 +18,11 @@
                      javaType="cn.itsource.product.domain.ProductType">
             <id column="typeId" property="id"/>
             <result column="typeName" property="name"/>
+            <result column="typePath" property="path"/>
         </association>
     </resultMap>
     <select id="queryPage" resultMap="BaseResultMap">
-        select tb.*,tp.id typeId,tp.name typeName
+        select tb.*,tp.id typeId,tp.name typeName,tp.path typePath
         from t_brand tb
         left join t_product_type tp on tb.product_type_id = tp.id
         <include refid="whereSql"></include>

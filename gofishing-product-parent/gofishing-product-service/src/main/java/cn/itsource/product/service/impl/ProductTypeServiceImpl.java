@@ -41,12 +41,10 @@ public class ProductTypeServiceImpl extends ServiceImpl<ProductTypeMapper, Produ
                 firstLevelTypes.add(productType);
             }else{
                 //不是一级就用他的子级找上级
-                ProductType parent =
-                        productTypeMap.get(productType.getPid());
-                //没有子类的先创建一个待用
-                if (parent.getChildren() == null) {
-                    parent.setChildren(new ArrayList<>());
-                }
+                ProductType parent = productTypeMap.get(productType.getPid());
+//                if (parent.getChildren() == null){
+//                    parent.setChildren(new ArrayList<>());
+//                }
                 parent.getChildren().add(productType);
             }
         }
