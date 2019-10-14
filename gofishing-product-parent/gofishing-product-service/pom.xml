@@ -47,12 +47,7 @@
         <artifactId>springfox-swagger-ui</artifactId>
         <version>2.9.2</version>
     </dependency>
-    <!--商品模块interface导入-->
-    <dependency>
-        <groupId>cn.itsource</groupId>
-        <artifactId>gofishing-product-interface</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </dependency>
+
     <!-- mybatis-plus导入 -->
     <dependency>
         <groupId>com.baomidou</groupId>
@@ -64,6 +59,25 @@
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
         <version>8.0.13</version>
+    </dependency>
+
+    <!--商品模块interface导入-->
+    <dependency>
+        <groupId>cn.itsource</groupId>
+        <artifactId>gofishing-product-interface</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <!-- 公共接口的导入 -->
+    <dependency>
+        <groupId>cn.itsource</groupId>
+        <artifactId>common-interface</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <!-- fastjson依赖 -->
+    <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>1.2.47</version>
     </dependency>
 </dependencies>
 

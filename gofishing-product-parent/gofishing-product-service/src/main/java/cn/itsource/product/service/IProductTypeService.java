@@ -14,5 +14,7 @@ import java.util.List;
  * @since 2019-10-12
  */
 public interface IProductTypeService extends IService<ProductType> {
-     List<ProductType> loadProductTypeTree();
+    List<ProductType> loadProductTypeTree();
+
+    void genHomePage();
 }

@@ -19,6 +19,21 @@ public class ProductTypeController {
     public IProductTypeService productTypeService;
 
     /**
+     * 静态化首页
+     * @return
+     */
+    @PostMapping("/genHomePage")
+    public AjaxResult genHomePage(){
+        try {
+            productTypeService.genHomePage();
+            return AjaxResult.me();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage("操作失败!"+e.getMessage());
+        }
+    }
+
+    /**
     * 保存和修改公用的
     * @param productType  传递的实体
     * @return Ajaxresult转换结果
@@ -74,7 +89,6 @@ public class ProductTypeController {
 
     /**
     * 分页查询数据
-    *
     * @param query 查询对象
     * @return PageList 分页对象
     */
@@ -86,6 +100,10 @@ public class ProductTypeController {
         return new PageList<ProductType>(ipage.getTotal(),ipage.getRecords());
     }
 
+    /**
+     * 展示商品类型树
+     * @return
+     */
     @RequestMapping(value = "/loadProductTypeTree",method = RequestMethod.GET)
     public List<ProductType> loadProductTypeTree(){
         return productTypeService.loadProductTypeTree();
