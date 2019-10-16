@@ -7,16 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common-service" />
-        <module name="gofishing-config-server" />
+        <module name="gofishing-plat-interface" />
         <module name="gofishing-plat-service" />
         <module name="gofishing-product-service" />
         <module name="common-interface" />
-        <module name="basic-util" />
+        <module name="gofishing-eureka" />
         <module name="basic-generater" />
         <module name="gofishing-product-interface" />
         <module name="gofishing-zuul" />
-        <module name="gofishing-eureka" />
-        <module name="gofishing-plat-interface" />
+        <module name="gofishing-config-server" />
+        <module name="basic-util" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />

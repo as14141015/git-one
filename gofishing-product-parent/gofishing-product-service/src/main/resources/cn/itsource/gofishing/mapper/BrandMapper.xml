@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itsource.gofishing.mapper.BrandMapper">
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.itsource.product.domain.Brand">
+        <id column="id" property="id" />
+        <result column="createTime" property="createTime" />
+        <result column="updateTime" property="updateTime" />
+        <result column="name" property="name" />
+        <result column="englishName" property="englishName" />
+        <result column="firstLetter" property="firstLetter" />
+        <result column="description" property="description" />
+        <result column="product_type_id" property="productTypeId" />
+        <result column="sortIndex" property="sortIndex" />
+        <result column="logo" property="logo" />
+        <!--association 对象的映射-->
+        <association property="productType"
+                     javaType="cn.itsource.product.domain.ProductType">
+            <id column="typeId" property="id"/>
+            <result column="typeName" property="name"/>
+            <result column="typePath" property="path"/>
+        </association>
+    </resultMap>
+    <select id="queryPage" resultMap="BaseResultMap">
+        select tb.*,tp.id typeId,tp.name typeName,tp.path typePath
+        from t_brand tb
+        left join t_product_type tp on tb.product_type_id = tp.id
+        <include refid="whereSql"></include>
+    </select>
+    <!--查询条件-->
+    <sql id="whereSql">
+        <where>
+            <if test="#{query.keyword}!=null">
+                and (
+                tb.name like concat('%',#{query.keyword},'%')
+                or
+                tb.englishName like concat('%',#{query.keyword},'%')
+                )
+            </if>
+        </where>
+    </sql>
+</mapper>

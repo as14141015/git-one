@@ -37,11 +37,13 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
+
         <!-- Eureka 客户端依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+
         <!-- swagger2配置 -->
         <dependency>
             <groupId>io.springfox</groupId>
@@ -59,7 +61,11 @@
             <artifactId>jedis</artifactId>
             <version>2.9.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>cn.itsource</groupId>
+            <artifactId>fastdfs</artifactId>
+            <version>1.20</version>
+        </dependency>
         <!--velocity-->
         <dependency>
             <groupId>org.apache.velocity</groupId>
