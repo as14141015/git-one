@@ -15,7 +15,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author BKE
- * @since 2019-10-12
+ * @since 2019-10-17
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -72,7 +72,7 @@ public class Product implements Serializable {
     /**
      * 状态
      */
-    private Integer state;
+    private Integer state=0;
 
     /**
      * 最高价
@@ -125,5 +125,23 @@ public class Product implements Serializable {
     @TableField("badCommentCount")
     private Integer badCommentCount;
 
+    /**
+     * sku属性摘要
+     */
+    @TableField("skuProperties")
+    private String skuProperties;
+    /**
+     * 媒体属性摘要
+     */
+    @TableField("medias")
+    private String medias;
 
+    @TableField(exist = false)
+    private ProductType productType;
+
+    @TableField(exist = false)
+    private Brand brand;
+
+    @TableField(exist = false)
+    private ProductExt ext;
 }

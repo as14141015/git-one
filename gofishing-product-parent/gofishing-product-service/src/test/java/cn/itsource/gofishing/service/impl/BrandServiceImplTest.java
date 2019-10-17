@@ -4,7 +4,6 @@ import cn.itsource.gofishing.ProductServiceApp;
 import cn.itsource.product.domain.Brand;
 import cn.itsource.gofishing.mapper.BrandMapper;
 import cn.itsource.product.query.BrandQuery;
-import cn.itsource.gofishing.service.IBrandService;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.junit.Test;

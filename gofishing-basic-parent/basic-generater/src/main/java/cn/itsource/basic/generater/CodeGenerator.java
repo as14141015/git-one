@@ -27,6 +27,8 @@ public class CodeGenerator {
         gc.setAuthor(rb.getString("author"));
         gc.setOpen(false);
         gc.setBaseResultMap(true);
+//        gc.setFileOverride(true);//是否已新的覆盖之前的，默认为false
+
         // gc.setSwagger2(true); 实体属性 Swagger2 注解
         mpg.setGlobalConfig(gc);
 
@@ -41,7 +43,7 @@ public class CodeGenerator {
 
         // 包配置
         final PackageConfig pc = new PackageConfig();
-        pc.setParent("cn.itsource.product");
+        pc.setParent("cn.itsource.gofishing.product");
         pc.setEntity("domain");
         mpg.setPackageInfo(pc);
 
@@ -129,7 +131,7 @@ public class CodeGenerator {
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
         strategy.setEntityLombokModel(true);
         //生成哪些表的代码
-        strategy.setInclude("t_brand","t_product_type","t_product");
+        strategy.setInclude("t_product","t_product_ext","t_product_comment","t_sku","t_specification");
         strategy.setTablePrefix("t_");
         mpg.setStrategy(strategy);
         mpg.execute();

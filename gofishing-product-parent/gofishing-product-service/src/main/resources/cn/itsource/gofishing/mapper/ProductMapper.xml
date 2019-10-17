@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.itsource.gofishing.mapper.ProductMapper">
-
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="cn.itsource.product.domain.Product">
         <id column="id" property="id" />
@@ -25,6 +24,32 @@
         <result column="goodCommentCount" property="goodCommentCount" />
         <result column="commonCommentCount" property="commonCommentCount" />
         <result column="badCommentCount" property="badCommentCount" />
+        <result column="skuProperties" property="skuProperties" />
+        <result column="medias" property="medias" />
+        <association property="productType" javaType="cn.itsource.product.domain.ProductType">
+            <id column="product_type_id" property="id"/>
+            <result column="productTypeName" property="name"/>
+        </association>
+        <association property="brand" javaType="cn.itsource.product.domain.Brand">
+            <id column="brand_id" property="id"/>
+            <result column="brandName" property="name"/>
+        </association>
     </resultMap>
-
+    <select id="queryPage" resultMap="BaseResultMap">
+        select t.*,tb.name brandName,tp.name productTypeName from t_product t left join t_brand tb on t.brand_id=tb.id
+        left join t_product_type tp on t.product_type_id=tp.id
+        <include refid="whereSql"></include>
+    </select>
+    <!--查询条件-->
+    <sql id="whereSql">
+        <where>
+            <if test="#{query.keyword}!=null">
+                and (
+                t.name like concat('%',#{query.keyword},'%')
+                or
+                t.subName like concat('%',#{query.keyword},'%')
+                )
+            </if>
+        </where>
+    </sql>
 </mapper>

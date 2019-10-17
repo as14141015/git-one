@@ -2,7 +2,6 @@ package cn.itsource.gofishing.mapper;
 
 import cn.itsource.product.domain.ProductType;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>

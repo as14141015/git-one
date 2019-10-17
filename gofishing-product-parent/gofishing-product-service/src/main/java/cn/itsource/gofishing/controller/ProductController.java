@@ -2,11 +2,10 @@ package cn.itsource.gofishing.controller;
 
 import cn.itsource.basic.util.AjaxResult;
 import cn.itsource.basic.util.PageList;
+import cn.itsource.basic.util.StrUtils;
 import cn.itsource.gofishing.service.IProductService;
-import cn.itsource.product.query.ProductQuery;
 import cn.itsource.product.domain.Product;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.baomidou.mybatisplus.core.metadata.IPage;
+import cn.itsource.product.query.ProductQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,7 +22,7 @@ public class ProductController {
     * @param product  传递的实体
     * @return Ajaxresult转换结果
     */
-    @RequestMapping(value="/add",method= RequestMethod.POST)
+    @RequestMapping(value="/save",method= RequestMethod.POST)
     public AjaxResult save(@RequestBody Product product){
         try {
             if(product.getId()!=null){
@@ -54,13 +53,28 @@ public class ProductController {
         }
     }
 
+    /**
+     * 批量删除
+     * @param ids
+     * @return
+     */
+    @RequestMapping(value="/deleteBatch",method=RequestMethod.DELETE)
+    public AjaxResult deleteBatch(@RequestParam("ids") String ids){
+        try{
+            List<Long> longs = StrUtils.splitStr2LongArr(ids);
+            productService.removeByIds(longs);
+            return AjaxResult.me();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage("删除对象失败！"+e.getMessage());
+        }
+    }
     //获取
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public Product get(@PathVariable("id") Long id)
     {
         return productService.getById(id);
     }
-
 
     /**
     * 查看所有
@@ -72,7 +86,6 @@ public class ProductController {
         return productService.list(null);
     }
 
-
     /**
     * 分页查询数据
     *
@@ -80,10 +93,8 @@ public class ProductController {
     * @return PageList 分页对象
     */
     @RequestMapping(value = "/json",method = RequestMethod.POST)
-    public PageList<Product> json(@RequestBody ProductQuery query)
-    {
-        Page<Product> page = new Page<Product>(query.getPage(),query.getRows());
-        IPage<Product> ipage = productService.page(page);
-        return new PageList<Product>(ipage.getTotal(),ipage.getRecords());
+    public PageList<Product> json(@RequestBody ProductQuery query){
+        return productService.queryPage(query);
     }
+
 }
