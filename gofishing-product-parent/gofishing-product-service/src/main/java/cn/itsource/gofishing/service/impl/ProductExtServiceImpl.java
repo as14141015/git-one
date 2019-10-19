@@ -6,6 +6,8 @@ import cn.itsource.product.domain.ProductExt;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
+import java.io.Serializable;
+
 /**
  * <p>
  * 商品扩展 服务实现类
@@ -16,5 +18,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class ProductExtServiceImpl extends ServiceImpl<ProductExtMapper, ProductExt> implements IProductExtService {
-
+    public ProductExt findByProductId (Long id){
+        return baseMapper.findByProductId(id);
+    };
 }

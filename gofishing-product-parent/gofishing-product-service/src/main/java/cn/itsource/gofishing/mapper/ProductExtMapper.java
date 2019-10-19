@@ -4,6 +4,8 @@ package cn.itsource.gofishing.mapper;
 import cn.itsource.product.domain.ProductExt;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
+import java.io.Serializable;
+
 /**
  * <p>
  * 商品扩展 Mapper 接口
@@ -13,5 +15,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @since 2019-10-17
  */
 public interface ProductExtMapper extends BaseMapper<ProductExt> {
-
+    ProductExt findByProductId (Serializable id);
 }

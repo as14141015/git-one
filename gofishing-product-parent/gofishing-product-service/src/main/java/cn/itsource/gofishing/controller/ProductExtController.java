@@ -2,6 +2,7 @@ package cn.itsource.gofishing.controller;
 
 import cn.itsource.basic.util.PageList;
 import cn.itsource.gofishing.service.IProductExtService;
+import cn.itsource.gofishing.service.IProductService;
 import cn.itsource.product.domain.ProductExt;
 import cn.itsource.product.query.ProductExtQuery;
 import cn.itsource.basic.util.AjaxResult;
@@ -18,6 +19,8 @@ public class ProductExtController {
     @Autowired
     public IProductExtService productExtService;
 
+    @Autowired
+    private IProductService product;
     /**
     * 保存和修改公用的
     * @param productExt  传递的实体
@@ -44,7 +47,7 @@ public class ProductExtController {
     * @return
     */
     @RequestMapping(value="/delete/{id}",method=RequestMethod.DELETE)
-    public AjaxResult delete(@PathVariable("id") Integer id){
+    public AjaxResult delete(@PathVariable("id") Long id){
         try {
             productExtService.removeById(id);
             return AjaxResult.me();
@@ -56,9 +59,14 @@ public class ProductExtController {
 
     //获取
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
-    public ProductExt get(@PathVariable("id") Long id)
-    {
+    public ProductExt get(@PathVariable("id") Long id) {
         return productExtService.getById(id);
+    }
+
+    //通过product的id获取到ProductExt的id，查询并返回
+    @RequestMapping(value = "/productIdGetEid",method = RequestMethod.GET)
+    public ProductExt productIdGetEid(@RequestParam("id") Long id) {
+        return productExtService.findByProductId(id);
     }
 
 

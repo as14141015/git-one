@@ -6,7 +6,6 @@ import cn.itsource.gofishing.mapper.ProductMapper;
 import cn.itsource.gofishing.service.IProductService;
 import cn.itsource.product.domain.Product;
 import cn.itsource.product.domain.ProductExt;
-import cn.itsource.product.query.BrandQuery;
 import cn.itsource.product.query.ProductQuery;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -25,15 +24,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> implements IProductService {
     @Autowired
-    private ProductMapper productMapper;
-    @Autowired
     private ProductExtMapper productExtMapper;
 
     @Override
     public boolean save(Product product) {
         //创建时间
         product.setCreateTime(System.currentTimeMillis());
-        productMapper.insert(product);
+        baseMapper.insert(product);
         ProductExt ext = product.getExt();
         //mybatis-plus自动返回生成的主键，保存到对象中
         ext.setProductId(product.getId());
@@ -55,7 +52,7 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
     @Override
     public PageList<Product> queryPage(ProductQuery query) {
         IPage<Product> productIPage =
-                productMapper.queryPage(new Page(query.getPage(),
+                baseMapper.queryPage(new Page(query.getPage(),
                         query.getRows()), query);
         PageList<Product> pageList = new PageList<>
                 (productIPage.getTotal(),productIPage.getRecords());

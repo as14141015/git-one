@@ -9,5 +9,8 @@
         <result column="richContent" property="richContent" />
         <result column="productId" property="productId" />
     </resultMap>
+    <select id="findByProductId" resultType="cn.itsource.product.domain.ProductExt" parameterType="java.lang.Long">
+        select * from t_product_ext where productId = #{id}
+    </select>
 
 </mapper>
