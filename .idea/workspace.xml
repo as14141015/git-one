@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7af97ff0-3d06-4098-b6f5-9a7cf78a4b9c" name="Default Changelist" comment="商品的维护">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gofishing-common-parent/common-service/src/main/resources/fdfs_client.conf" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-common-parent/common-service/src/main/resources/fdfs_client.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/controller/ProductExtController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/controller/ProductExtController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/mapper/ProductExtMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/mapper/ProductExtMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/service/IProductExtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/service/IProductExtService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/service/impl/ProductExtServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/service/impl/ProductExtServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-interface/src/main/java/cn/itsource/product/domain/Specification.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-interface/src/main/java/cn/itsource/product/domain/Specification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/mapper/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/service/IProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/resources/cn/itsource/gofishing/mapper/ProductExtMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/resources/cn/itsource/gofishing/mapper/ProductExtMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gofishing/zuul/cofig/GlobalCorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-zuul/src/main/java/cn/itsource/gofishing/zuul/cofig/GlobalCorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/resources/cn/itsource/gofishing/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/resources/cn/itsource/gofishing/mapper/ProductMapper.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -311,7 +309,7 @@
       <workItem from="1571360071801" duration="6284000" />
       <workItem from="1571396619919" duration="235000" />
       <workItem from="1571396998194" duration="259000" />
-      <workItem from="1571397493864" duration="16130000" />
+      <workItem from="1571397493864" duration="23427000" />
     </task>
     <task id="LOCAL-00001" summary="提交">
       <created>1570718391296</created>
@@ -383,7 +381,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571365670934</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="商品的维护">
+      <created>1571477864046</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1571477864046</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * <p>
@@ -19,4 +20,6 @@ import org.apache.ibatis.annotations.Param;
 @Mapper
 public interface ProductMapper extends BaseMapper<Product> {
     IPage<Product> queryPage(Page page, @Param("query") ProductQuery query);
+
+    void updateViewProperties(@Param("productId") Long productId,@Param("specifications") String specifications);
 }
