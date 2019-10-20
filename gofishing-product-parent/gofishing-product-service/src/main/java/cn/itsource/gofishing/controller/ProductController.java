@@ -7,6 +7,7 @@ import cn.itsource.gofishing.service.IProductService;
 import cn.itsource.product.domain.Product;
 import cn.itsource.product.domain.Specification;
 import cn.itsource.product.query.ProductQuery;
+import cn.itsource.product.vo.SkuPropertiesAndSkuVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -108,10 +109,16 @@ public class ProductController {
     public List<Specification> getViewProperties(@PathVariable("productId") Long  productId){
         return productService.getViewProperties(productId);
     }
+
+    /**
+     * 保存修改商品的显示属性
+     * @param productId
+     * @param specifications
+     * @return
+     */
     @PostMapping("/updateViewProperties")
-    public AjaxResult updateViewProperties(
-            @RequestParam("productId")Long productId,
-            @RequestBody List<Specification> specifications){
+    public AjaxResult updateViewProperties(@RequestParam("productId")Long productId,
+                                           @RequestBody List<Specification> specifications){
         try {
             productService.updateViewProperties(productId,specifications);
             return AjaxResult.me();
@@ -129,6 +136,26 @@ public class ProductController {
      */
     @GetMapping("/skuProperties/{productId}")
     public List<Specification> getSkuProperties(@PathVariable("productId") Long  productId){
+        System.out.println(productId);
         return productService.getSkuProperties(productId);
+    }
+
+    /**
+     * 保存修改商品的Sku属性
+     * @param productId
+     * @param skuPropertiesAndSkuVo
+     * @return
+     */
+    @PostMapping("/updateSkuProperties")
+    public AjaxResult updateSkuProperties(@RequestParam("productId")Long productId,
+                                          @RequestBody SkuPropertiesAndSkuVo skuPropertiesAndSkuVo){
+
+        try {
+            productService.updateSkuProperties(productId,skuPropertiesAndSkuVo.getSkuProperties(),skuPropertiesAndSkuVo.getSkus());
+            return AjaxResult.me();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage("保存失败！"+e.getMessage());
+        }
     }
 }

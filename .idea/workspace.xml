@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7af97ff0-3d06-4098-b6f5-9a7cf78a4b9c" name="Default Changelist" comment="商品的维护">
+    <list default="true" id="7af97ff0-3d06-4098-b6f5-9a7cf78a4b9c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-interface/src/main/java/cn/itsource/product/vo/SkuPropertiesAndSkuVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gofishing-common-parent/common-service/src/main/resources/fdfs_client.conf" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-common-parent/common-service/src/main/resources/fdfs_client.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-interface/src/main/java/cn/itsource/product/domain/Specification.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-interface/src/main/java/cn/itsource/product/domain/Specification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/mapper/ProductMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gofishing-product-parent/gofishing-product-service/src/main/java/cn/itsource/gofishing/service/IProductService.java" afterDir="false" />
@@ -251,9 +252,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ProductServiceApp" />
-        <item itemvalue="Spring Boot.CommonServiceApp" />
         <item itemvalue="Spring Boot.ZuulApp" />
         <item itemvalue="Spring Boot.PlatServiceApp" />
+        <item itemvalue="Spring Boot.CommonServiceApp" />
         <item itemvalue="Spring Boot.ConfigApp" />
       </list>
     </recent_temporary>
@@ -266,12 +267,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@8897f812" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1aae7e66" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@8897f812" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@57f98d39" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1aae7e66" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@881c25ed" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -309,7 +310,8 @@
       <workItem from="1571360071801" duration="6284000" />
       <workItem from="1571396619919" duration="235000" />
       <workItem from="1571396998194" duration="259000" />
-      <workItem from="1571397493864" duration="23427000" />
+      <workItem from="1571397493864" duration="23516000" />
+      <workItem from="1571537094741" duration="6434000" />
     </task>
     <task id="LOCAL-00001" summary="提交">
       <created>1570718391296</created>
@@ -388,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571477864046</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="很快就OK">
+      <created>1571498162325</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1571498162325</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,6 +426,7 @@
     <MESSAGE value="Redis的初步形成" />
     <MESSAGE value="优化商品类型模块" />
     <MESSAGE value="上传和删除图片" />
+    <MESSAGE value="很快就OK" />
     <MESSAGE value="商品的维护" />
     <option name="LAST_COMMIT_MESSAGE" value="商品的维护" />
   </component>

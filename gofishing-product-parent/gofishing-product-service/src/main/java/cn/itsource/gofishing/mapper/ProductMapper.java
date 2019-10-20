@@ -9,6 +9,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 /**
  * <p>
  * 商品 Mapper 接口
@@ -22,4 +24,6 @@ public interface ProductMapper extends BaseMapper<Product> {
     IPage<Product> queryPage(Page page, @Param("query") ProductQuery query);
 
     void updateViewProperties(@Param("productId") Long productId,@Param("specifications") String specifications);
+
+    void updateSkuProperties(@Param("productId")Long productId,@Param("skuProperties") String skuProperties);
 }

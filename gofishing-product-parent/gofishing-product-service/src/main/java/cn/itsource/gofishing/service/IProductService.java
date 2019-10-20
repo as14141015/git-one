@@ -2,12 +2,14 @@ package cn.itsource.gofishing.service;
 
 import cn.itsource.basic.util.PageList;
 import cn.itsource.product.domain.Product;
+import cn.itsource.product.domain.Sku;
 import cn.itsource.product.domain.Specification;
 import cn.itsource.product.query.BrandQuery;
 import cn.itsource.product.query.ProductQuery;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -25,4 +27,6 @@ public interface IProductService extends IService<Product> {
     void updateViewProperties(Long productId, List<Specification> viewProperties);
 
     List<Specification> getSkuProperties(Long productId);
+
+    void updateSkuProperties(Long productId, List<Specification> skuProperties, List<Map<String, String>> skus);
 }
