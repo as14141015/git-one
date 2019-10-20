@@ -4,6 +4,8 @@ package cn.itsource.gofishing.service;
 import cn.itsource.product.domain.Sku;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
  * <p>
  * SKU 服务类
@@ -14,4 +16,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface ISkuService extends IService<Sku> {
 
+    List<Sku> getSkusByProductId(Long productId);
 }

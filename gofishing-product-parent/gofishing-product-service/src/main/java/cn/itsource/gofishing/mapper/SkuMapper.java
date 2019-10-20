@@ -3,6 +3,8 @@ package cn.itsource.gofishing.mapper;
 import cn.itsource.product.domain.Sku;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
+import java.util.List;
+
 /**
  * <p>
  * SKU Mapper 接口
@@ -13,4 +15,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface SkuMapper extends BaseMapper<Sku> {
 
+    List<Sku> getSkusByProductId(Long productId);
 }

@@ -4,21 +4,26 @@ import cn.itsource.basic.util.AjaxResult;
 import cn.itsource.basic.util.PageList;
 import cn.itsource.basic.util.StrUtils;
 import cn.itsource.gofishing.service.IProductService;
+import cn.itsource.gofishing.service.ISkuService;
 import cn.itsource.product.domain.Product;
+import cn.itsource.product.domain.Sku;
 import cn.itsource.product.domain.Specification;
 import cn.itsource.product.query.ProductQuery;
 import cn.itsource.product.vo.SkuPropertiesAndSkuVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/product")
 public class ProductController {
     @Autowired
     public IProductService productService;
-
+    @Autowired
+    public ISkuService skuService;
     /**
     * 保存和修改公用的
     * @param product  传递的实体
@@ -135,9 +140,13 @@ public class ProductController {
      * @return
      */
     @GetMapping("/skuProperties/{productId}")
-    public List<Specification> getSkuProperties(@PathVariable("productId") Long  productId){
-        System.out.println(productId);
-        return productService.getSkuProperties(productId);
+    public Map<String,Object> getSkuProperties(@PathVariable("productId") Long  productId){
+        List<Specification> skuProperties = productService.getSkuProperties(productId);
+        List<Sku> skus = skuService.getSkusByProductId(productId);
+        Map<String, Object> map = new HashMap<>();
+        map.put("skuProperties",skuProperties);
+        map.put("skus",skus);
+        return map;
     }
 
     /**

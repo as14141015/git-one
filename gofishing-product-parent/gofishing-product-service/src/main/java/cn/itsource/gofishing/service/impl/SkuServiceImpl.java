@@ -6,6 +6,8 @@ import cn.itsource.product.domain.Sku;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * <p>
  * SKU 服务实现类
@@ -16,5 +18,8 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class SkuServiceImpl extends ServiceImpl<SkuMapper, Sku> implements ISkuService {
-
+    @Override
+    public List<Sku> getSkusByProductId(Long productId) {
+        return baseMapper.getSkusByProductId(productId);
+    }
 }

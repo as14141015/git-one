@@ -21,5 +21,8 @@
         <result column="skuMainPic" property="skuMainPic" />
         <result column="indexs" property="indexs" />
     </resultMap>
+    <select id="getSkusByProductId" resultType="cn.itsource.product.domain.Sku">
+        select  * from t_sku where product_id=#{productId}
+    </select>
 
 </mapper>
