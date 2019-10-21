@@ -1,24 +1,26 @@
 package cn.itsource.gofishing.common.domain;
 
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
 /**
  * 用来连接ES存储商品数据
  */
 @Document(indexName = "gofishing")
+@Data
 public class ProductDoc {
     @Id
     private Long id;
 
     /**
-     * 商品名称
+     * all包含：商品名称 副名称 商品类型名称 品牌名称
+     * 以空格隔离
      */
-    private String name;
-    /**
-     * 副名称
-     */
-    private String subName;
+    @Field(analyzer = "ik_max_word",type = FieldType.Text)
+    private String all;
 
     /**
      * 商品类型ID
@@ -37,7 +39,6 @@ public class ProductDoc {
      * 下架时间
      */
     private Long offSaleTime;
-
 
     /**
      * 最高价
@@ -58,20 +59,34 @@ public class ProductDoc {
      */
     private Integer commentCount;
     /**
+     * 浏览数量
+     */
+    private Integer viewCount;
+    /**
+     * 商品名称
+     */
+    @Field(store = true,type = FieldType.Text)
+    private String name;
+    /**
+     * 商品副标题
+     */
+    @Field(store = true,type = FieldType.Text)
+    private String subName;
+    /**
      * 显示属性摘要
      */
+    @Field(store = true,type = FieldType.Text)
     private String viewProperties;
 
     /**
      * sku属性摘要
      */
+    @Field(store = true,type = FieldType.Text)
     private String skuProperties;
     /**
      * 媒体属性摘要
      */
+    @Field(store = true,type = FieldType.Text)
     private String medias;
-    /**
-     * 显示属性摘要
-     */
-//    private String skuProperties;
+
 }

@@ -167,4 +167,39 @@ public class ProductController {
             return AjaxResult.me().setSuccess(false).setMessage("保存失败！"+e.getMessage());
         }
     }
+    /**
+     * 批量上架
+     * @param ids
+     * @return
+     */
+    @PostMapping("/onSale")
+    public AjaxResult onSale(@RequestParam("ids")String ids){
+        try {
+            //把逗号分隔字符串转换List的Long StrUtils自定义工具类
+            List<Long> idsList = StrUtils.splitStr2LongArr(ids);
+            productService.onSale(idsList);
+            return AjaxResult.me();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage("上架失败！"+e.getMessage());
+        }
+    }
+
+    /**
+     * 批量下架
+     * @param ids
+     * @return
+     */
+    @PostMapping("/offSale")
+    public AjaxResult offSale(@RequestParam("ids")String ids){
+
+        try {
+            List<Long> idsList = StrUtils.splitStr2LongArr(ids);
+            productService.offSale(idsList);
+            return AjaxResult.me();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage("下架失败！"+e.getMessage());
+        }
+    }
 }

@@ -22,7 +22,7 @@
 				<ul>
 					<li>
 						<a class="menu-hd home" href="/" target="_top">
-							<i></i> 爱购首页
+							<i></i> 去渔首页
 						</a>
 					</li>
 					<li class="menu-item">
@@ -69,7 +69,7 @@
 					<li class="menu-item">
 						<div class="menu">
 							<a class="menu-hd we-chat" href="" target="_top">
-								<i></i> 关注爱购
+								<i></i> 关注去渔
 								<b></b>
 							</a>
 							<div id="menu-5" class="menu-bd we-chat-qrcode">

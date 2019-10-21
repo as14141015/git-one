@@ -29,4 +29,15 @@ public interface IProductService extends IService<Product> {
     List<Specification> getSkuProperties(Long productId);
 
     void updateSkuProperties(Long productId, List<Specification> skuProperties, List<Map<String, String>> skus);
+
+    /**
+     * 批量下架
+     * @param idsList
+     */
+    void offSale(List<Long> idsList);
+    /**
+     * 批量上架
+     * @param idsList
+     */
+    void onSale(List<Long> idsList);
 }

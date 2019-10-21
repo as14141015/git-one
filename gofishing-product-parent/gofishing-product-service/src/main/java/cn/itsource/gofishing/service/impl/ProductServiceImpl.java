@@ -1,15 +1,11 @@
 package cn.itsource.gofishing.service.impl;
 
 import cn.itsource.basic.util.PageList;
-import cn.itsource.gofishing.mapper.ProductExtMapper;
-import cn.itsource.gofishing.mapper.ProductMapper;
-import cn.itsource.gofishing.mapper.SkuMapper;
-import cn.itsource.gofishing.mapper.SpecificationMapper;
+import cn.itsource.gofishing.common.client.ProductESClient;
+import cn.itsource.gofishing.common.domain.ProductDoc;
+import cn.itsource.gofishing.mapper.*;
 import cn.itsource.gofishing.service.IProductService;
-import cn.itsource.product.domain.Product;
-import cn.itsource.product.domain.ProductExt;
-import cn.itsource.product.domain.Sku;
-import cn.itsource.product.domain.Specification;
+import cn.itsource.product.domain.*;
 import cn.itsource.product.query.ProductQuery;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
@@ -22,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -41,7 +38,106 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
     private SpecificationMapper specificationMapper;
     @Autowired
     private SkuMapper skuMapper;
+    @Autowired
+    private ProductESClient productESClient;
+    @Autowired
+    private ProductTypeMapper productTypeMapper;
+    @Autowired
+    private BrandMapper brandMapper;
+    /**
+     * 批量下架 todo
+     * @param idsList
+     */
+    @Override
+    public void offSale(List<Long> idsList) {
+        baseMapper.offSale(idsList,System.currentTimeMillis());
+        productESClient.deleteBatch(idsList);
+    }
+    /**
+     * 批量上架
+     * @param idsList
+     */
+    @Override
+    public void onSale(List<Long> idsList) {
+        //修改数据库中的state
+        baseMapper.onSale(idsList,System.currentTimeMillis());
+        //查询数据库中的数据
+        List<Product> products = baseMapper.selectBatchIds(idsList);
+        //遍历并赋值给ProductDoc
+        List<ProductDoc> productDocs = productsToProductDocs(products);
+        productESClient.saveBatch(productDocs);
+    }
 
+    /**
+     * 将Product集合转为ProductDoc集合
+     * @param products
+     * @return
+     */
+    private List<ProductDoc> productsToProductDocs(List<Product> products) {
+        List<ProductDoc> productDocs = new ArrayList<>();
+        ProductDoc productDoc = null;
+        for (Product product : products) {
+            productDoc = productToProductDoc(product);
+            productDocs.add(productDoc);
+        }
+
+        return productDocs;
+    }
+    /**
+     * 将Product对象转为ProductDoc对象
+     * @param product
+     * @return
+     */
+    private ProductDoc productToProductDoc(Product product) {
+        System.out.println(product);
+        ProductDoc productDoc = new ProductDoc();
+        //通过product.getBrandId()查询对应brand
+        Brand brand = brandMapper.selectById(product.getBrandId());
+        //通过product.getProductTypeId()查询对应商品类型
+        ProductType productType = productTypeMapper.selectById(product.getProductTypeId());
+
+        productDoc.setId(product.getId());
+        //使用一个StringBuilder拼接字符串
+        StringBuilder all = new StringBuilder();
+        //all包含：商品名称 副名称 商品类型名称 品牌名称
+        all.append(product.getName()).append(" ")
+                .append(product.getSubName()).append(" ")
+                .append(productType.getName()).append(" ")
+                .append(brand.getName());
+        productDoc.setAll(all.toString());
+        productDoc.setProductTypeId(product.getProductTypeId());
+        productDoc.setBrandId(product.getBrandId());
+        productDoc.setOnSaleTime(product.getOnSaleTime());
+        productDoc.setOffSaleTime(product.getOffSaleTime());
+        //根据productId查询相应的sku属性数据
+        List<Sku> skus = skuMapper.selectList(new QueryWrapper<Sku>().eq("product_id", product.getId()));
+        //创建最大价格和最小价格
+        Integer maxPrice = 0;
+        Integer minPrice = 0;
+        if (skus!=null&&skus.size()>0){
+            minPrice = skus.get(0).getPrice();
+        }
+        for (Sku sku : skus) {
+            if (maxPrice<sku.getPrice()){
+                maxPrice = sku.getPrice();
+            }
+            if (minPrice>sku.getPrice()){
+                minPrice = sku.getPrice();
+            }
+        }
+        productDoc.setMaxPrice(maxPrice);
+        productDoc.setMinPrice(minPrice);
+        productDoc.setSaleCount(product.getSaleCount());
+        productDoc.setCommentCount(product.getCommentCount());
+        productDoc.setViewCount(product.getViewCount());
+        productDoc.setName(product.getName());
+        productDoc.setSubName(product.getSubName());
+        productDoc.setViewProperties(product.getViewProperties());
+        productDoc.setSkuProperties(product.getSkuProperties());
+        productDoc.setMedias(product.getMedias());
+        System.out.println("productDoc========"+productDoc);
+        return productDoc;
+    }
 
     /**
      * 获取当前商品的显示属性
