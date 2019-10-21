@@ -5,7 +5,7 @@
 		<dl class="cat">
 			<dt class="cat-name">
 				<i class="iconfont ${firstType.logo}"></i> 
-				<a href="/list?productType=${firstType.id}" target="_blank" title="$firstType.name">$firstType.name</a>
+				<a href="/list.html?productType=${firstType.id}" target="_blank" title="$firstType.name">$firstType.name</a>
 			</dt>
 			<i class="right-arrow">&gt;</i>
 		</dl>
@@ -37,7 +37,7 @@
 				<!-- 品牌logo -->
 				<div class="item-brands">
 					<div class="brands-inner">
-						<img src="/static/img/test/cat-ad.png" />
+						<img src="img/test/cat-ad.png" />
 					</div>
 				</div>
 				<!-- 分类广告图片 -->
