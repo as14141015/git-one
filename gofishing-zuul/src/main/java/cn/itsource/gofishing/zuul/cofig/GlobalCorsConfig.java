@@ -15,6 +15,8 @@ public class GlobalCorsConfig {
         // localhost 和 127.0.0.1 是不同的域
         config.addAllowedOrigin("http://127.0.0.1:6003");
         config.addAllowedOrigin("http://localhost:6003");
+        config.addAllowedOrigin("http://127.0.0.1:6002");
+        config.addAllowedOrigin("http://localhost:6002");
         //2) 是否发送Cookie信息
         config.setAllowCredentials(true);
         //3) 允许的请求方式

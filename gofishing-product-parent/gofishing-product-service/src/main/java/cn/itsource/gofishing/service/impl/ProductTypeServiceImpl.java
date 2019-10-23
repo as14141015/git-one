@@ -5,8 +5,10 @@ import cn.itsource.gofishing.common.client.StaticPageClient;
 import cn.itsource.product.domain.ProductType;
 import cn.itsource.gofishing.mapper.ProductTypeMapper;
 import cn.itsource.gofishing.service.IProductTypeService;
+import cn.itsource.product.vo.ProductTypeCommentVo;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,6 +34,43 @@ public class ProductTypeServiceImpl extends ServiceImpl<ProductTypeMapper, Produ
     private RedisClient redisClient;
     @Autowired
     private StaticPageClient staticPageClient;
+
+    /**
+     * 加载面包屑
+     * @param productId
+     */
+    @Override
+    public List<ProductTypeCommentVo> loadCommentTree(Long productId) {
+        //当前类型
+        ProductType type = baseMapper.selectById(productId);
+        //获取path，通过path中的值获得父类
+        String path = type.getPath();
+        String[] split = path.substring(1).split("\\.");
+        List<Long> ids = new ArrayList<>();
+        for (String id : split) {
+            ids.add(Long.parseLong(id));
+        }
+        //查询各个级别
+        List<ProductType> parents = baseMapper.selectBatchIds(ids);
+        //将数据封装到Vo中
+        List<ProductTypeCommentVo> productTypeCommentVos= new ArrayList<>();
+        ProductTypeCommentVo vo = null;
+        for (ProductType parent : parents) {
+            vo = new ProductTypeCommentVo();
+            vo.setCurrentType(parent);
+            //查询同级别类型
+            List<ProductType> productTypes =
+                    baseMapper.selectList(new QueryWrapper<ProductType>().eq("pid", parent.getPid()));
+            vo.setPeerTypes(productTypes);
+            productTypeCommentVos.add(vo);
+        }
+        return productTypeCommentVos;
+    }
+
+    /**
+     * 加载类型树
+     * @return
+     */
     @Override
     public List<ProductType>  loadProductTypeTree(){
         List<ProductType> productTypes = null;

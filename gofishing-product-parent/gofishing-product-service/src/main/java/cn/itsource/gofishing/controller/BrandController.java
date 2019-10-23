@@ -6,6 +6,7 @@ import cn.itsource.basic.util.StrUtils;
 import cn.itsource.gofishing.service.IBrandService;
 import cn.itsource.product.query.BrandQuery;
 import cn.itsource.product.domain.Brand;
+import cn.itsource.product.vo.BrandVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -97,5 +98,12 @@ public class BrandController {
     @RequestMapping(value = "/json",method = RequestMethod.POST)
     public PageList<Brand> json(@RequestBody BrandQuery query){
         return brandService.queryPage(query);
+    }
+    /**
+     * 根据ProductTypeId查询到当前的品牌
+     */
+    @GetMapping("/brandTreeByProductTypeId")
+    public BrandVo brandTreeByProductTypeId(@RequestParam("productTypeId")Long ProductTypeId){
+        return brandService.getBrandVo(ProductTypeId);
     }
 }

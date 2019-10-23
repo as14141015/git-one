@@ -5,6 +5,7 @@ import cn.itsource.basic.util.PageList;
 import cn.itsource.product.query.ProductTypeQuery;
 import cn.itsource.gofishing.service.IProductTypeService;
 import cn.itsource.product.domain.ProductType;
+import cn.itsource.product.vo.ProductTypeCommentVo;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -109,5 +110,8 @@ public class ProductTypeController {
         return productTypeService.loadProductTypeTree();
     }
 
-
+    @GetMapping("/loadCommentTree")
+    public List<ProductTypeCommentVo> loadCommentTree(@RequestParam("productTypeId")Long productTypeId){
+        return productTypeService.loadCommentTree(productTypeId);
+    }
 }

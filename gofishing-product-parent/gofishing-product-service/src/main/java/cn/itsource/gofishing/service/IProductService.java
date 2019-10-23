@@ -1,11 +1,11 @@
 package cn.itsource.gofishing.service;
 
 import cn.itsource.basic.util.PageList;
+import cn.itsource.gofishing.common.domain.ProductDoc;
 import cn.itsource.product.domain.Product;
-import cn.itsource.product.domain.Sku;
 import cn.itsource.product.domain.Specification;
-import cn.itsource.product.query.BrandQuery;
 import cn.itsource.product.query.ProductQuery;
+import cn.itsource.gofishing.common.domain.ProductParamVo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
@@ -40,4 +40,6 @@ public interface IProductService extends IService<Product> {
      * @param idsList
      */
     void onSale(List<Long> idsList);
+
+    PageList<Product> queryOnSale(ProductParamVo productParamVo);
 }

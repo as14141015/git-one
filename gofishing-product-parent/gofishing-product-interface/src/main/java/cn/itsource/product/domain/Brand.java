@@ -37,7 +37,7 @@ public class Brand implements Serializable {
     private Long updateTime;
 
     /**
-     * 用户姓名
+     * 品牌姓名
      */
     private String name;
 

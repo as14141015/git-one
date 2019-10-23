@@ -3,6 +3,7 @@ package cn.itsource.gofishing.service;
 import cn.itsource.basic.util.PageList;
 import cn.itsource.product.domain.Brand;
 import cn.itsource.product.query.BrandQuery;
+import cn.itsource.product.vo.BrandVo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -16,4 +17,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface IBrandService extends IService<Brand> {
     PageList<Brand> queryPage(BrandQuery query);
 
+    BrandVo getBrandVo(Long productTypeId);
 }

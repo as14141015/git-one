@@ -1,6 +1,7 @@
 package cn.itsource.gofishing.service;
 
 import cn.itsource.product.domain.ProductType;
+import cn.itsource.product.vo.ProductTypeCommentVo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
@@ -17,4 +18,6 @@ public interface IProductTypeService extends IService<ProductType> {
     List<ProductType> loadProductTypeTree();
 
     void genHomePage();
+
+    List<ProductTypeCommentVo> loadCommentTree(Long productId);
 }

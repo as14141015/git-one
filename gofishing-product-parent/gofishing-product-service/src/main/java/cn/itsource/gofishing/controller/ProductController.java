@@ -3,12 +3,14 @@ package cn.itsource.gofishing.controller;
 import cn.itsource.basic.util.AjaxResult;
 import cn.itsource.basic.util.PageList;
 import cn.itsource.basic.util.StrUtils;
+import cn.itsource.gofishing.common.domain.ProductDoc;
 import cn.itsource.gofishing.service.IProductService;
 import cn.itsource.gofishing.service.ISkuService;
 import cn.itsource.product.domain.Product;
 import cn.itsource.product.domain.Sku;
 import cn.itsource.product.domain.Specification;
 import cn.itsource.product.query.ProductQuery;
+import cn.itsource.gofishing.common.domain.ProductParamVo;
 import cn.itsource.product.vo.SkuPropertiesAndSkuVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -201,5 +203,9 @@ public class ProductController {
             e.printStackTrace();
             return AjaxResult.me().setSuccess(false).setMessage("下架失败！"+e.getMessage());
         }
+    }
+    @PostMapping("/queryOnSale")
+    public PageList<Product> queryOnSale(@RequestBody ProductParamVo productParamVo){
+        return productService.queryOnSale(productParamVo);
     }
 }

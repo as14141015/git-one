@@ -1,6 +1,8 @@
 package cn.itsource.gofishing.common.client;
 
+import cn.itsource.basic.util.PageList;
 import cn.itsource.gofishing.common.domain.ProductDoc;
+import cn.itsource.gofishing.common.domain.ProductParamVo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,4 +15,7 @@ public interface ProductESClient {
     void saveBatch(@RequestBody List<ProductDoc> productDocs);
     @PostMapping("/es/deleteBatch")
     void deleteBatch(@RequestBody List<Long> idList);
+    @PostMapping("/es/search")
+    PageList<ProductDoc> search(@RequestBody ProductParamVo productParamVo);
+
 }

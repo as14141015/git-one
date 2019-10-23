@@ -7,6 +7,7 @@ import cn.itsource.gofishing.mapper.*;
 import cn.itsource.gofishing.service.IProductService;
 import cn.itsource.product.domain.*;
 import cn.itsource.product.query.ProductQuery;
+import cn.itsource.gofishing.common.domain.ProductParamVo;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -44,8 +45,36 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
     private ProductTypeMapper productTypeMapper;
     @Autowired
     private BrandMapper brandMapper;
+
     /**
-     * 批量下架 todo
+     * 商品搜索
+     * @param productParamVo
+     * @return
+     */
+    @Override
+    public PageList<Product> queryOnSale(ProductParamVo productParamVo) {
+        //ES查询出来的参数
+        PageList<ProductDoc> pageList = productESClient.search(productParamVo);
+
+        List<Product> products = new ArrayList<>();
+        Product product = null;
+        for (ProductDoc productDoc : pageList.getRows()){
+            product = new Product();
+            product.setId(productDoc.getId());
+            product.setName(productDoc.getName());
+            product.setMedias(productDoc.getMedias());
+            product.setSaleCount(productDoc.getSaleCount());
+            product.setSubName(productDoc.getSubName());
+            product.setMaxPrice(productDoc.getMaxPrice());
+            product.setMinPrice(productDoc.getMinPrice());
+            products.add(product);
+        }
+
+        return new PageList<Product>(pageList.getTotal(),products);
+    }
+
+    /**
+     * 批量下架
      * @param idsList
      */
     @Override
