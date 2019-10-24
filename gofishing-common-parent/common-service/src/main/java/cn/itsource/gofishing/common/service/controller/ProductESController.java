@@ -68,9 +68,8 @@ public class ProductESController {
          * 最高价格和最低价格
          * 这里我们使用的是一个反向思维，将前端输入的最大值<minPrice,输入的最小值>maxPrice
          * 就可以控制在前端可选价格范围进行查询
-         * 这里我们前端设置的最小值
          */
-        if (vo.getMinPrice()!=null){
+        if (vo.getMaxPrice()!=null){
             boolQueryBuilder.must(new RangeQueryBuilder("maxPrice").gte(vo.getMinPrice()));
         }
         if (vo.getMinPrice()!=null){

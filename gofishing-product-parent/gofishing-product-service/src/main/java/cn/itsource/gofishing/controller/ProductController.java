@@ -12,6 +12,7 @@ import cn.itsource.product.domain.Specification;
 import cn.itsource.product.query.ProductQuery;
 import cn.itsource.gofishing.common.domain.ProductParamVo;
 import cn.itsource.product.vo.SkuPropertiesAndSkuVo;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -208,4 +209,7 @@ public class ProductController {
     public PageList<Product> queryOnSale(@RequestBody ProductParamVo productParamVo){
         return productService.queryOnSale(productParamVo);
     }
+
+
+
 }

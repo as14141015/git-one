@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 
 @RestController
@@ -86,5 +87,12 @@ public class SkuController {
         Page<Sku> page = new Page<Sku>(query.getPage(),query.getRows());
         IPage<Sku> ipage = skuService.page(page);
         return new PageList<Sku>(ipage.getTotal(),ipage.getRecords());
+    }
+    /**
+     * 详情页的sku属性
+     */
+    @GetMapping("/skuChange")
+    public Map<String, Object> skuChange(@RequestParam("productId")Long productId,@RequestParam("indexs") String indexs){
+        return skuService.skuChange(productId, indexs);
     }
 }

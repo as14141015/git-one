@@ -2,12 +2,15 @@ package cn.itsource.gofishing.service.impl;
 
 import cn.itsource.basic.util.PageList;
 import cn.itsource.gofishing.common.client.ProductESClient;
+import cn.itsource.gofishing.common.client.StaticPageClient;
 import cn.itsource.gofishing.common.domain.ProductDoc;
 import cn.itsource.gofishing.mapper.*;
 import cn.itsource.gofishing.service.IProductService;
+import cn.itsource.gofishing.service.IProductTypeService;
 import cn.itsource.product.domain.*;
 import cn.itsource.product.query.ProductQuery;
 import cn.itsource.gofishing.common.domain.ProductParamVo;
+import cn.itsource.product.vo.ProductTypeCommentVo;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -20,6 +23,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -45,7 +49,10 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
     private ProductTypeMapper productTypeMapper;
     @Autowired
     private BrandMapper brandMapper;
-
+    @Autowired
+    private StaticPageClient staticPageClient;
+    @Autowired
+    private IProductTypeService typeService;
     /**
      * 商品搜索
      * @param productParamVo
@@ -94,7 +101,59 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
         List<Product> products = baseMapper.selectBatchIds(idsList);
         //遍历并赋值给ProductDoc
         List<ProductDoc> productDocs = productsToProductDocs(products);
+        //上架的时候，自动生成该商品的静态模板
+        staticInDetail(products);
         productESClient.saveBatch(productDocs);
+    }
+
+    /**
+     * 生成上架商品的静态页面
+     * @param products
+     */
+    private void staticInDetail(List<Product> products) {
+        //循环获取到的商品,生成独立的html文件，并传入页面显示数据
+        for (Product product : products) {
+            String templatePath = "D:\\eclipse\\eclipse-jee-neon-2-win32-x86_64\\gofishing-parent\\gofishing-product-parent\\gofishing-product-service\\src\\main\\resources\\template\\product.detail.vm";
+            String targetPath =
+                    "D:\\eclipse\\eclipse-jee-neon-2-win32-x86_64\\gofishing-web-parent\\ecommerce\\detail\\"+product.getId()+".html";
+            //数据
+            Map<String, Object> model = new HashMap<>();
+            //获取面包屑的数据
+            List<ProductTypeCommentVo> productTypeCommentVos = typeService.loadCommentTree(product.getId());
+            model.put("crumbs",productTypeCommentVos);
+            model.put("product",product);
+            //sku属性
+            String skuProperties = product.getSkuProperties();
+            List<Specification> skus = JSONArray.parseArray(skuProperties,Specification.class);
+            model.put("skus",skus);
+            //显示属性
+            String viewProperties = product.getViewProperties();
+            List<Specification> views = JSONArray.parseArray(viewProperties, Specification.class);
+            model.put("views",views);
+            //商品详情
+            ProductExt productExt = productExtMapper.selectOne(new QueryWrapper<ProductExt>().eq("productId", product.getId()));
+            String richContent = "";
+            if (productExt.getRichContent()!=null){
+                richContent = productExt.getRichContent();
+            }
+            model.put("richContent",richContent);
+            //商品的媒体属性 照片
+            String mediasStr = product.getMedias();//aaa,bbb,ccc 我们要将它拼接成以下格式
+            String[] mediasArr = mediasStr.split(",");//[aaa,bbb,ccc] 对应静态页面中的照片显示格式
+            List<List<String>> medias = new ArrayList<>();
+            for (String media : mediasArr) {
+                List<String> oneMedia = new ArrayList<>();
+                oneMedia.add("http://172.16.4.27"+media);
+                oneMedia.add("http://172.16.4.27"+media);
+                oneMedia.add("http://172.16.4.27"+media);
+                medias.add(oneMedia);
+            }
+            String images = JSON.toJSONString(medias);
+            model.put("medias",images);
+            //skuJSONStr
+            model.put("skuJSON",product.getSkuProperties());
+            staticPageClient.getStaticPage(templatePath,targetPath,model);
+        }
     }
 
     /**
